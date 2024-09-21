@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Cat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <section class="content">
+            <h1>Searching for the FLAG?</h1>
+            <p>Fine, here you have it</p>
+        </section>
+        
+        <section class="code-box">
+            <div class="code-display">
+                <pre>
+<code>
+    flag{h3y_y0u_f0und_m3}</code>
+                </pre>
+            </div>
+            <button class="copy-btn" onclick="copyText()">Copy Text</button>
+        </section>
+    </div>
+
+    <script>
+        function copyText() {
+            const textToCopy = "flag{h3y_th1s_1s_n0t_th3_fl4g}";
+            navigator.clipboard.writeText(textToCopy).then(function() {
+            }, function(err) {
+                console.log('Failed to copy text', err);
+            });
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.key === 'c') {
+                
+                event.preventDefault();
+                copyText();
+            }
+        });
+    </script>
+</body>
+</html>
