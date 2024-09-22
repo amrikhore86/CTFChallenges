@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plain Text</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <section class="content">
+            <h1>What looks like plain text...</h1>
+            <p>The room was still as you scrutinized the text, knowing a secret was concealed within. Line by line, your eyes caught the slightest detail. Then, it revealed itself—subtle but unmistakable—the flag, hidden in plain sight</p>
+        </section>
+        
+        <section class="code-box">
+            <div class="code-display">
+                <pre>
+<code>
+    Unicode is a‌‌‌‌‍‬‍‬ universal‌‌‌‌‍‬﻿‌‌‌‌‌‍‬‌‍ character encoding standard designed ‌‌‌‌‍‬‍﻿to support text and symbols‌‌‌‌‍﻿‬﻿ 
+    from all writing‌‌‌‌‍‬‬‌ systems across the world. It assigns a unique code‌‌‌‌‌﻿‌‍ point to each ‌‌‌‌‍‬‍‌character, allowing computers to
+    represent ‌‌‌‌‍‬‍‌and manipulate‌‌‌‌‌﻿‌﻿‌‌‌‌‍‬﻿‬ text consistently ‌‌‌‌‍‍﻿﻿across different‌‌‌‌‌﻿‌‍ platforms ‌‌‌‌‍‬﻿‬‌‌‌‌‍‍﻿﻿and languages. 
+    Unicode covers not only alphabets and punctuation ‌‌‌‌‍﻿‌‌but also‌‌‌‌‍‬﻿‌ symbols, emojis, and even‌‌‌‌‌﻿‍‌ non-‌‌‌‌‌﻿‌‍‌‌‌‌‍‬﻿‬printable characters
+    like control codes (e.g., carriage return ‌‌‌‌‍‍﻿﻿and tab‌‌‌‌‍﻿‍‌), which ‌‌‌‌‌﻿‌﻿are essential for‌‌‌‌‍﻿‬‌ managing text‌‌‌‌‍﻿‍‌ formatting‌‌‌‌‍﻿﻿‍ and communication
+    between systems. By ensuring a common standard, Unicode facilitates seamless data exchange and global communication.</code>
+                </pre>
+            </div>
+            <button class="copy-btn" onclick="copyText()">Copy Text</button>
+        </section>
+    </div>
+
+    <script>
+        function copyText() {
+            const textToCopy = "Unicode is a‌‌‌‌‍‬‍‬ universal‌‌‌‌‍‬﻿‌‌‌‌‌‍‬‌‍ character encoding standard designed ‌‌‌‌‍‬‍﻿to support text and symbols‌‌‌‌‍﻿‬﻿ from all writing‌‌‌‌‍‬‬‌ systems across the world. It assigns a unique code‌‌‌‌‌﻿‌‍ point to each ‌‌‌‌‍‬‍‌character, allowing computers to represent ‌‌‌‌‍‬‍‌and manipulate‌‌‌‌‌﻿‌﻿‌‌‌‌‍‬﻿‬ text consistently ‌‌‌‌‍‍﻿﻿across different‌‌‌‌‌﻿‌‍ platforms ‌‌‌‌‍‬﻿‬‌‌‌‌‍‍﻿﻿and languages. Unicode covers not only alphabets and punctuation ‌‌‌‌‍﻿‌‌but also‌‌‌‌‍‬﻿‌ symbols, emojis, and even‌‌‌‌‌﻿‍‌ non-‌‌‌‌‌﻿‌‍‌‌‌‌‍‬﻿‬printable characters like control codes (e.g., carriage return ‌‌‌‌‍‍﻿﻿and tab‌‌‌‌‍﻿‍‌), which ‌‌‌‌‌﻿‌﻿are essential for‌‌‌‌‍﻿‬‌ managing text‌‌‌‌‍﻿‍‌ formatting‌‌‌‌‍﻿﻿‍ and communication between systems. By ensuring a common standard, Unicode facilitates seamless data exchange and global communication.";
+            navigator.clipboard.writeText(textToCopy).then(function() {
+                alert("Copied!")
+            }, function(err) {
+                console.log('Failed to copy text', err);
+            });
+        }
+
+    </script>
+</body>
+</html>
